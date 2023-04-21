@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/1.1.0/font-awesome-animation.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Around the world in plates</title>
+  </head>
+  <!------------body start----------------------->
+  <body>
+    <header class="navigation">
+      <div class="logo">
+        <a href="index.html">
+          <img src="../images/new.logo.jpg" alt="Around the World in Plates" />
+        </a>
+      </div>
+      <a href="index.html" class="navbar-link">Home</a>
+      <a href="globalrecipes.html" class="navbar-link">Global Recipes</a>
+      <a href="gallery.html" class="navbar-link">Gallery</a>
+      <a href="quiz.html" class="navbar-link">Quiz</a>
+      <div id="credits">
+        <p><a href="contact-us.html">Contact us</a></p>
+      </div>
+    </header>
+    <!----------------end header--------------------------->
+    <!----------------contact form container--------------->
+    <!--------https://www.youtube.com/watch?v=MV-Aqkjju64&t=672s-->
+    <div class="container">
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>Contact Us</h3>
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="phone" placeholder="Phone Number" required />
+        <textarea
+          id="message"
+          rows="4"
+          placeholder="How can we help?"
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <!----------- library for sending emails-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      /*------------- function sending  an email when contact us is submitted --*/
+      function sendEmail() {
+        Email.send({
+          SecureToken: "a8ee7455-63b3-494d-ad3d-7924bfc2223e",
+          To: "aroundtheworldinplates@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "New Contact Enquiry",
+          Body:
+            "Name: " +
+            document.getElementById("name").value +
+            "<br> Email: " +
+            document.getElementById("email").value +
+            "<br> Phone Number: " +
+            document.getElementById("phone").value +
+            "<br> Message: " +
+            document.getElementById("message").value,
+        }).then((message) => alert("Message Sent"));
+      }
+    </script>
+    <!------------footer --------------->
+    <footer>
+      <div class="copyright">
+        <p>&copy; 2023 Daniela Sirakova</p>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com"
+          ><img src="../images/facebook.png" alt="Facebook icon"
+        /></a>
+        <a href="https://www.instagram.com"
+          ><img src="../images/instagram.png" alt="Instagram icon"
+        /></a>
+        <a href="https://www.twitter.com"
+          ><img src="../images/twitter.png" alt="Twitter icon"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>

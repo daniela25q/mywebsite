@@ -1,0 +1,502 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap");
+/*----------------Styles---------------*/
+html {
+  font-size: 70%;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 218, 185);
+  text-rendering: optimizelegibility;
+  font-size: 25px;
+  font-family: "Righteous";
+}
+
+/*----Utility Styles---------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Style for the header navigation */
+.navigation {
+  color: #f08e05; /* set text color */
+  display: flex; /* use flexbox to align elements */
+  justify-content: space-between; /* space elements evenly */
+  padding: 20px; /* add padding */
+  align-items: center;
+}
+#credits a {
+  text-decoration: none;
+  color: rgb(255, 218, 185);
+  font-size: 2rem;
+  border-style: dashed;
+}
+
+#credits a:hover {
+  color: #f08e05; /* set text color */
+}
+
+/* Style for the logo */
+.logo img {
+  max-height: 250px; /* set maximum height */
+}
+
+/* Style for the navbar links */
+.navbar-link {
+  color: rgb(255, 218, 185);
+  margin: 0.1rem;
+  letter-spacing: 0 5rem;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 1000;
+}
+
+.navbar-link:hover {
+  text-decoration: underline; /* add underline on hover */
+  color: rgb(196, 77, 13);
+}
+.navbar-link:hover::before {
+  width: 100%;
+}
+/*___hero img------------*/
+.hero-image {
+  background-image: url("../images/food7.jpg"); /* add a background image */
+  height: 400px; /* set the height of the hero section */
+  background-position: center; /* center the background image */
+  background-repeat: no-repeat; /* prevent the background image from repeating */
+  background-size: cover; /* make the background image cover the entire section */
+  display: flex; /* use flexbox to center content vertically */
+  align-items: center; /* center content vertically */
+  justify-content: center; /* center content horizontally */
+  box-shadow: 0.3rem 0.3rem 0.1rem #e78207;
+}
+
+.content {
+  text-align: center; /* center text */
+  color: #ffffff; /* set text color*/
+  letter-spacing: 5px;
+  font-family: "Righteous", sans-serif;
+  justify-content: space-between; /* space elements evenly */
+}
+
+h2 {
+  font-size: 40px; /* set font size */
+  margin-bottom: 20px; /* add some space below the heading */
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 5rem; /* set font size */
+}
+/*------------hero img finish*/
+#best-pizza,
+#best-cheese,
+#best-chef,
+#best-barista {
+  margin: 100px auto;
+  max-width: 800px;
+  text-align: center;
+  justify-content: space-between; /* space elements evenly */
+}
+#best-pizza h4,
+#best-cheese h4,
+#best-chef h4,
+#best-barista h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  letter-spacing: 0 5rem;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 1000;
+}
+#best-pizza p,
+#best-cheese p,
+#best-chef p,
+#best-barista p {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+#best-pizza img,
+#best-cheese img,
+#best-chef img,
+#best-barista img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  box-shadow: 0.3rem 0.3rem 0.1rem #e78207;
+}
+#best-pizza strong,
+#best-cheese strong,
+#best-chef strong,
+#best-barista strong {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#best-pizza a,
+#best-cheese a,
+#best-chef a,
+#best-barista a {
+  display: inline-block;
+  color: #fa8507;
+  text-decoration: underline;
+}
+
+/*------footer----*/
+footer {
+  background-color: #000000;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.social-links a {
+  margin-right: 20px;
+}
+
+.social-links img {
+  height: 30px;
+  width: auto;
+}
+.social-links img:hover {
+  opacity: 0.1;
+}
+/*---------------global recipes styles----------------*/
+
+.heading {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "poppins", sans-serif;
+  margin-top: 5rem;
+}
+.heading:hover {
+  color: rgb(255, 136, 0);
+}
+
+.continents {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+.continents-link {
+  position: relative;
+  margin: 4rem 1rem;
+}
+.continents-link:hover .continents-name {
+  width: 100%;
+}
+
+.food-img {
+  width: 24vw;
+  height: 15vw;
+  object-fit: cover;
+  box-shadow: 0.3rem 0.3rem 0.1rem #e78207;
+  transition: all 0.5s;
+}
+.continents-link:hover .food-img {
+  filter: blur(0.3rem);
+  opacity: 0.6;
+}
+.continents-name {
+  position: absolute;
+  top: 8rem;
+  left: 3.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.1s;
+}
+/*-------------------Recipes page start---------------------------------*/
+
+.recipe-info {
+  position: absolute;
+  width: 800px;
+  left: 45%;
+}
+
+.recipe-hero {
+  display: grid;
+  gap: 10rem;
+}
+.recipe-hero-img {
+  height: 400px;
+  top: 25px;
+  border-radius: 10rem;
+  margin-left: 1cm;
+}
+.recipe-container {
+  margin-top: 4cm;
+}
+
+.recipe-icons {
+  display: flex;
+  position: relative;
+  left: 25%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  margin: 6rem 0;
+  text-align: center;
+  font-size: 2rem;
+}
+.recipe-icons i {
+  color: rgb(245, 246, 241);
+}
+.recipe-icons h5,
+.recipe-icons p {
+  margin-bottom: 0;
+  font-size: 0.75em;
+}
+
+@media screen and (min-width: 992px) {
+  .recipe-hero {
+    grid-template-columns: 4fr 5fr;
+    align-items: center;
+  }
+}
+.recipe-content {
+  padding: 3rem 0;
+  display: flex;
+  gap: 2rem 5rem;
+}
+@media screen and (min-width: 992px) {
+  .recipe-content {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+.single-instruction header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+.single-instruction header p {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--primary-500);
+  margin-bottom: 0;
+  margin-left: 1cm;
+}
+.single-instruction > p {
+  color: var(--grey-700);
+  margin-left: 1cm;
+}
+
+.single-instruction header div {
+  height: 2px;
+  background: var(--grey-300);
+}
+
+.second-column {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.single-ingredient {
+  border-bottom: 2px solid var(--grey-300);
+  padding-bottom: 0.75rem;
+  color: var(--grey-700);
+  margin-left: 1cm;
+}
+.ingredients-heading {
+  margin-left: 1cm;
+  margin-top: 2cm;
+  text-decoration: underline;
+}
+.instructions-heading {
+  margin-left: 1cm;
+  margin-top: 2cm;
+  text-decoration: underline;
+}
+.video-container {
+  display: flex; 
+  flex-wrap: nowrap; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+/*----------Gallery-------*/
+h1 {
+  text-align: center;
+  display: flex;
+
+  flex-direction: column;
+  color: rgb(232, 102, 9);
+
+  font-family: "Righteous", sans-serif;
+  letter-spacing: 10px;
+  min-height: 10vh;
+  margin-top: 0;
+}
+h1:hover {
+  color: rgb(221, 203, 175);
+}
+
+/* Style the slideshow container */
+.slideshow-container {
+  position: relative;
+  width: 700px; /* set the width of the container */
+  height: 500px; /* set the height of the container */
+  overflow: hidden;
+  margin: 0 auto; /* center the container horizontally */
+  box-shadow: 0.3rem 0.3rem 0.1rem #e78207;
+}
+/* Style the slide images */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* Set the first slide to be visible */
+.slide:first-child {
+  opacity: 1;
+}
+
+/* Add a fade-in effect to the slide images */
+.slide.active {
+  opacity: 1;
+}
+.gallery-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*--------------Gallery end-----------------*/
+
+/*--------------------------Quiz Start-----------------------------------*/
+.hero1-image {
+  background-image: url("../images/food8.jpg"); /* add a background image */
+  height: 300px; /* set the height of the hero section */
+  background-position: center; /* center the background image */
+  background-repeat: no-repeat; /* prevent the background image from repeating */
+  background-size: cover; /* make the background image cover the entire section */
+  display: flex; /* use flexbox to center content vertically */
+  align-items: center; /* center content vertically */
+  justify-content: center; /* center content horizontally */
+  box-shadow: 0.3rem 0.3rem 0.1rem #e78207;
+}
+.quiz-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  height: 400px;
+}
+
+.quiz-container {
+  background-color: rgb(243, 242, 240);
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+#quiz-question {
+  color: rgb(102, 96, 96);
+  font-size: 35px;
+}
+
+label {
+  color: rgb(246, 127, 1);
+}
+
+.quiz-header {
+  padding: 4rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+ul li label {
+  cursor: pointer;
+}
+button {
+  background: #e35706;
+  color: #f3eeee;
+  border: #030303;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 2.1rem;
+}
+
+/*-------------------Contact Us-------------------------*/
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+form {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+
+  width: 100%;
+  max-width: 600px;
+  border-radius: 50px;
+}
+form h3 {
+  color: #f77a05;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline-offset: none;
+  background: #f3eeee;
+}
+form button {
+  padding: 15px;
+  background: #0eac55;
+  color: #f3eeee;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0;
+  border-radius: 30px;
+}
